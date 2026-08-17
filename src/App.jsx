@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import MyNavbar from "./Navbar.jsx";
+import Imageslider from "./Imageslider.jsx";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -17,6 +18,7 @@ function App() {
         accentColor={accentColor}
         setAccentColor={setAccentColor}
       />
+      <Imageslider accentColor={accentColor} />
     </>
   );
 }
