@@ -3,6 +3,7 @@ import MyNavbar from "./Navbar.jsx";
 
 function App() {
   const [theme, setTheme] = useState("light");
+  const [accentColor, setAccentColor] = useState("#e00000");
 
   useEffect(() => {
     document.body.style.backgroundColor =
@@ -10,7 +11,12 @@ function App() {
   }, [theme]);
   return (
     <>
-      <MyNavbar theme={theme} setTheme={setTheme} />
+      <MyNavbar
+        theme={theme}
+        setTheme={setTheme}
+        accentColor={accentColor}
+        setAccentColor={setAccentColor}
+      />
     </>
   );
 }

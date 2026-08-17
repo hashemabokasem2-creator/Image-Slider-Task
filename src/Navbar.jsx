@@ -2,7 +2,7 @@ import React from "react";
 import { Navbar, Container, Button } from "react-bootstrap";
 import "./Navbar.css";
 
-function MyNavbar({ theme, setTheme }) {
+function MyNavbar({ theme, setTheme, accentColor, setAccentColor }) {
   const toggleTheme = () => {
     setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
   };
@@ -17,10 +17,13 @@ function MyNavbar({ theme, setTheme }) {
             theme === "light"
               ? "rgba(255, 255, 255, 0.4)"
               : "rgba(18, 18, 18, 0.4)",
+          borderBottom: `2px solid ${accentColor}`,
         }}
       >
         <Container fluid className="d-flex align-items-center p-0 h-100">
-          <div className="avatar">SP</div>
+          <div className="avatar" style={{ backgroundColor: accentColor }}>
+            SP
+          </div>
           <div className="flex-grow-1 d-none d-md-flex flex-column align-items-start ms-3">
             <h1
               className="title"
@@ -42,11 +45,17 @@ function MyNavbar({ theme, setTheme }) {
               variant="danger"
               className="switchBtn"
               onClick={toggleTheme}
+              style={{ backgroundColor: accentColor, borderColor: accentColor }}
             >
               {theme === "light" ? "Switch to Dark" : "Switch to Light"}
             </Button>
 
-            <input type="color" className="colorPicker" />
+            <input
+              type="color"
+              className="colorPicker"
+              value={accentColor}
+              onChange={(e) => setAccentColor(e.target.value)}
+            />
           </div>
         </Container>
       </Navbar>
