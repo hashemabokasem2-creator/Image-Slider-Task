@@ -3,10 +3,22 @@ import { Container, Card, Button } from "react-bootstrap";
 import "./Imageslider.css";
 
 const images = [
-  { src: "https://picsum.photos/1200/600?random=1", alt: "Image 1" },
-  { src: "https://picsum.photos/1200/600?random=2", alt: "Image 2" },
-  { src: "https://picsum.photos/1200/600?random=3", alt: "Image 3" },
-  { src: "https://picsum.photos/1200/600?random=4", alt: "Image 4" },
+  {
+    src: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&h=600&fit=crop",
+    alt: "Image 1",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1511884642898-4c92249e20b6?w=1200&h=600&fit=crop",
+    alt: "Image 2",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1434394354979-a235cd36269d?w=1200&h=600&fit=crop",
+    alt: "Image 3",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1200&h=600&fit=crop",
+    alt: "Image 4",
+  },
 ];
 
 function Imageslider({ accentColor, theme }) {
