@@ -1,0 +1,60 @@
+.customNav {
+  height: 120px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 2px solid #e00000;
+  z-index: 1030;
+  display: flex;
+  align-items: center;
+  transition: all 0.4s ease !important;
+}
+.avatar {
+  width: 36px;
+  height: 36px;
+  background-color: #e00000;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #0b132a;
+  margin: 20;
+  line-height: 1.5;
+  transition: all 0.4s ease !important;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #6c757d;
+  margin: 0;
+  line-height: 1.1;
+  transition: all 0.4s ease !important;
+}
+
+.switchBtn {
+  border-radius: 20px;
+  background-color: #e00000;
+  border: none;
+  padding: 8px 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.colorPicker {
+  width: 28px;
+  height: 28px;
+  border: 2px solid #e00000;
+  border-radius: 4px;
+  padding: 0;
+  cursor: pointer;
+  background: none;
+}
