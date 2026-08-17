@@ -9,7 +9,7 @@ const images = [
   { src: "https://picsum.photos/1200/600?random=4", alt: "Image 4" },
 ];
 
-function Imageslider({ accentColor }) {
+function Imageslider({ accentColor, theme }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextImage = () => {
@@ -40,7 +40,12 @@ function Imageslider({ accentColor }) {
               className="heroSlideImg"
             />
           </div>
-          <Card.Footer className="sliderControlsBar d-flex align-items-center justify-content-between">
+          <Card.Footer
+            className="sliderControlsBar d-flex align-items-center justify-content-between"
+            style={{
+              backgroundColor: theme === "light" ? "#ffffff" : "#080d1d",
+            }}
+          >
             <Button
               className="navSliderBtn"
               style={{ backgroundColor: accentColor, borderColor: accentColor }}
@@ -49,7 +54,13 @@ function Imageslider({ accentColor }) {
               Prev
             </Button>
 
-            <div className="slideCounterBox">
+            <div
+              className="slideCounterBox"
+              style={{
+                color: theme === "light" ? "#0d0e0f" : "#edeaea",
+                backgroundColor: theme === "light" ? "#ffffff" : "#080d1d",
+              }}
+            >
               {currentIndex + 1} / {images.length}
             </div>
 
