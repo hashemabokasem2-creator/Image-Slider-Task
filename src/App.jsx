@@ -3,6 +3,7 @@ import MyNavbar from "./Navbar.jsx";
 import Imageslider from "./Imageslider.jsx";
 import Taxtcard from "./Taxtcard.jsx";
 import Hobbies from "./Hobbies.jsx";
+import Profile from "./Profile.jsx";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -23,6 +24,11 @@ function App() {
       <Imageslider accentColor={accentColor} theme={theme} />
       <Taxtcard accentColor={accentColor} theme={theme} />
       <Hobbies accentColor={accentColor} theme={theme} />
+      <Profile
+        accentColor={accentColor}
+        setAccentColor={setAccentColor}
+        theme={theme}
+      />
     </>
   );
 }
